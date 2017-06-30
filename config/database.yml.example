@@ -1,0 +1,21 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  host: localhost
+  username: <%= ENV['PG_USERNAME'] %>
+  password: <%= ENV['PG_PASSWORD'] %>
+
+development:
+  <<: *default
+  database: calreact_development
+
+test:
+  <<: *default
+  database: calreact_test
+
+production:
+  <<: *default
+  database: calreact_production
+  username: calreact
+  password: <%= ENV['CALREACT_DATABASE_PASSWORD'] %>
