@@ -21,6 +21,7 @@ gem "config"
 gem "kaminari", git: "git://github.com/amatsuda/kaminari.git", branch: "master"
 gem "figaro"
 gem "react-rails"
+gem "haml"
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 3.0"
 # Use ActiveModel has_secure_password
